@@ -8,7 +8,7 @@
 ## How it works
 
 ```
-git clone https://github.com/gutiluis/[reponame].git
+git clone https://github.com/gutiluis/cad.git
 ```
 
 ---
