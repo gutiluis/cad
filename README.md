@@ -2,7 +2,9 @@
 > CURRENTLY UNDER DEVELOPMENT
 
 # CAD with Rust, Cadcore, Frontend
+
 client requests model, server is in client-side (user-input)
+
 Compile cadcore to web assembly
 
 
