@@ -1,7 +1,10 @@
 > [!WARNING]
 > CURRENTLY UNDER DEVELOPMENT
 
-# CAD with Rust, Cadcore
+# CAD with Rust, Cadcore, Frontend
+client requests model, server is in client-side (user-input)
+Compile cadcore to web assembly
+
 
 ---
 
@@ -15,12 +18,15 @@ git clone https://github.com/gutiluis/cad.git
 
 ## Features
 
+- No .step files
+
 ---
 
 ## Tech-Stack
 
 - Rust
 - Cadcore
+- JavaScript
 
 ---
 
