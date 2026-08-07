@@ -7,7 +7,6 @@ client requests model, server is in client-side (user-input)
 
 Compile cadcore to web assembly
 
-
 ---
 
 ## How it works
@@ -32,6 +31,8 @@ npm run dev
 - Cadcore
 - JavaScript
 - Web Assembly
+- HTML
+- TypeScript
 
 ---
 
