@@ -1,5 +1,11 @@
-// descr: brige file cadcore and web assembly for compilation
+// file: lib.rs
+// descr: WASM interface. brige file cadcore and web assembly for compilation. library api
+
+
+
 use wasm_bindgen::prelude::*;
+// import mod.rs module with functions for api
+mod math;
 use serde::Serialize;
 
 #[derive(Serialize)]
@@ -11,6 +17,8 @@ struct MeshData {
 #[wasm_bindgen]
 pub struct WasmKernel {}
 
+
+// public API. server is frontend
 #[wasm_bindgen]
 impl WasmKernel {
 
@@ -19,7 +27,33 @@ impl WasmKernel {
         WasmKernel {}
     }
 
+    // trigonometric functions. will become API
+    #[wasm_bindgen(js_name = sine)]
+    pub fn sine(&self, degrees: f64) -> f64 {
+        math::sine(degrees)
+    }
+    #[wasm_bindgen(js_name = cosine)]
+    pub fn cosine(&self, degrees: f64) -> f64 {
+        math::cosine(degrees)
+    }
+    #[wasm_bindgen(js_name = tangent)]
+    pub fn tangent(&self, degrees: f64) -> f64 {
+        math::tangent(degrees)
+    }
+    #[wasm_bindgen(js_name = arcsine)]
+    pub fn arcsine(&self, value: f64) -> f64 {
+        math::arcsine(value)
+    }
+    #[wasm_bindgen(js_name = arccosine)]
+    pub fn arccosine(&self, value: f64) -> f64 {
+        math::arccosine(value)
+    }
+    #[wasm_bindgen(js_name = arctangent)]
+    pub fn arctangent(&self, value: f64) -> f64 {
+        math::arctangent(value)
+    }
 
+    // should become any figure
     #[wasm_bindgen(js_name = createBox)]
     pub fn create_box(
         &self,
@@ -38,13 +72,6 @@ impl WasmKernel {
                 size, -size, -size,
                 size, size, -size,
                 -size, size, -size,
-            ],
-
-            normals: vec![
-                0.0, 0.0, 1.0,
-                0.0, 0.0, 1.0,
-                0.0, 0.0, 1.0,
-                0.0, 0.0, 1.0,
             ],
 
             indices: vec![

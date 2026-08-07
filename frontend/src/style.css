@@ -23,6 +23,23 @@ body {
 }
 
 #canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
+}
+/* user input */
+#ui-panel {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    z-index: 10;
+
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+
+    font-family: sans-serif;
 }

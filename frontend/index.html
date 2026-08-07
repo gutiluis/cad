@@ -15,6 +15,94 @@
 
     <div id="canvas-container"></div>
 
+    <div id="ui-panel">
+        <section class="trigonometric-functions">
+            <div class="function-control">
+                <label>
+                    Angle (degrees):
+                    <input id="sineAngle" type="number" value="30">
+                </label>
+                <button id="calculateSine">
+                    Calculate Sine
+                </button>
+                <p>
+                    Result:
+                    <span id="sineResult">0</span>
+                </p>
+            </div>
+
+            <div class="function-control">
+                <label for="cosineAngle">
+                    Cosine Angle (degrees)
+                    <input id="cosineAngle" type="number" value="30">
+                </label>
+                <button id="calculateCosine">
+                    Calculate Cosine
+                </button>
+                <p>
+                    Result:
+                    <span id="cosineResult">0</span>
+                </p>
+            </div>
+            <div class="function-control">
+                <label>
+                    Tangent Angle (degrees)
+                    <input id="tangentAngle" type="number" value="30">
+                </label>
+                <button id="calculateTangent">
+                    Calculate Tangent
+                </button>
+                <p>
+                    Result:
+                    <span id="tangentResult">0</span>
+                </p>
+            </div>
+
+            <div class="function-control">
+                <label>
+                    Arcsine (degrees)
+                    <input id="arcsineValue" type="number">
+                </label>
+                <button id="calculateArcsine">
+                    Calculate Arcsine
+                </button>
+                <p>
+                    Result:
+                    <span id="arcsineResult">0</span>
+                </p>
+            </div>
+
+            <div class="function-control">
+                <label>
+                    Arccosine (degrees)
+                    <input id="arccosineValue" type="number" value="30">
+                </label>
+                <button id="calculateArccosine">
+                    Calculate Arccosine
+                </button>
+                <p>
+                    Result:
+                    <span id="arccosineResult">0</span>
+                </p>
+            </div>
+
+            <div class="function-control">
+                <label>
+                    Arctangent (degrees)
+                    <input id="arctangentValue" type="number">
+                </label>
+                <button id="calculateArctangent">
+                    Calculate Arctangent
+                </button>
+                <p>
+                    Result:
+                    <span id="arctangentResult">0</span>
+                </p>
+            </div>
+        </section>
+    </div>
+
+
     <script type="module" src="./src/main.ts"></script>
   </body>
 </html>

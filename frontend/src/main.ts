@@ -5,6 +5,133 @@ await init();
 
 const kernel = new WasmKernel();
 
+// sine input function
+const sineInput =
+    document.getElementById("sineAngle") as HTMLInputElement;
+const sineButton =
+    document.getElementById("calculateSine") as HTMLButtonElement;
+const sineResult =
+    document.getElementById("sineResult")!;
+sineButton.addEventListener("click", () => {
+    const degrees = Number(
+        sineInput.value
+    );
+    const result = kernel.sine(
+        degrees
+    );
+    sineResult.textContent =
+        result.toString();
+    console.log(
+        `sin(${degrees}) = ${result}`
+    );
+});
+
+const cosineInput =
+    document.getElementById("cosineAngle") as HTMLInputElement;
+const cosineButton =
+    document.getElementById("calculateCosine") as HTMLButtonElement;
+const cosineResult =
+    document.getElementById("cosineResult")!;
+cosineButton.addEventListener("click", () => {
+    const degrees = Number(
+        cosineInput.value
+    );
+    const result = kernel.cosine(
+        degrees
+    );
+    cosineResult.textContent =
+        result.toString();
+    console.log(
+        `cosine(${degrees}) = ${result}`
+    );
+});
+
+
+const tangentInput =
+    document.getElementById("tangentAngle") as HTMLInputElement;
+
+const tangentButton =
+    document.getElementById("calculateTangent") as HTMLButtonElement;
+
+const tangentResult =
+    document.getElementById("tangentResult")!;
+
+tangentButton.addEventListener("click", () => {
+    const degrees = Number(tangentInput.value);
+
+    const result = kernel.tangent(degrees);
+
+    tangentResult.textContent = result.toString();
+
+    console.log(`tangent(${degrees}) = ${result}`);
+});
+
+
+// ARCSINE
+const arcsineInput =
+    document.getElementById("arcsineValue") as HTMLInputElement;
+
+const arcsineButton =
+    document.getElementById("calculateArcsine") as HTMLButtonElement;
+
+const arcsineResult =
+    document.getElementById("arcsineResult")!;
+
+arcsineButton.addEventListener("click", () => {
+    const value = Number(arcsineInput.value);
+
+    const result = kernel.arcsine(value);
+
+    arcsineResult.textContent = result.toString();
+
+    console.log(`arcsine(${value}) = ${result}`);
+});
+
+
+// ARCCOSINE
+const arccosineInput =
+    document.getElementById("arccosineValue") as HTMLInputElement;
+
+const arccosineButton =
+    document.getElementById("calculateArccosine") as HTMLButtonElement;
+
+const arccosineResult =
+    document.getElementById("arccosineResult")!;
+
+arccosineButton.addEventListener("click", () => {
+    const value = Number(arccosineInput.value);
+
+    const result = kernel.arccosine(value);
+
+    arccosineResult.textContent = result.toString();
+
+    console.log(`arccosine(${value}) = ${result}`);
+});
+
+
+// ARCTANGENT
+const arctangentInput =
+    document.getElementById("arctangentValue") as HTMLInputElement;
+
+const arctangentButton =
+    document.getElementById("calculateArctangent") as HTMLButtonElement;
+
+const arctangentResult =
+    document.getElementById("arctangentResult")!;
+
+arctangentButton.addEventListener("click", () => {
+    const value = Number(arctangentInput.value);
+
+    const result = kernel.arctangent(value);
+
+    arctangentResult.textContent = result.toString();
+
+    console.log(`arctangent(${value}) = ${result}`);
+});
+
+
+
+
 // -----------------------------------------------------
 // Scene
 // -----------------------------------------------------

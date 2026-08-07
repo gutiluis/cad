@@ -1,7 +1,7 @@
 > [!WARNING]
 > CURRENTLY UNDER DEVELOPMENT
 
-# CAD with Rust, Cadcore, Frontend
+# CAD render in UI
 
 client requests model, server is in client-side (user-input)
 
@@ -29,7 +29,7 @@ git clone https://github.com/gutiluis/cad.git
 - Rust
 - Cadcore
 - JavaScript
-- WASM
+- Web Assembly
 
 ---
 
