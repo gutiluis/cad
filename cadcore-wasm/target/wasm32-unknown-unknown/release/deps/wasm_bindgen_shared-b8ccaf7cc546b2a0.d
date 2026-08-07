@@ -1,0 +1,12 @@
+/Users/lg/cad-project/cad/cadcore-wasm/target/wasm32-unknown-unknown/release/deps/wasm_bindgen_shared-b8ccaf7cc546b2a0.d: /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.126/src/lib.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.126/src/identifier.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.126/src/tys.rs
+
+/Users/lg/cad-project/cad/cadcore-wasm/target/wasm32-unknown-unknown/release/deps/libwasm_bindgen_shared-b8ccaf7cc546b2a0.rlib: /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.126/src/lib.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.126/src/identifier.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.126/src/tys.rs
+
+/Users/lg/cad-project/cad/cadcore-wasm/target/wasm32-unknown-unknown/release/deps/libwasm_bindgen_shared-b8ccaf7cc546b2a0.rmeta: /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.126/src/lib.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.126/src/identifier.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.126/src/tys.rs
+
+/Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.126/src/lib.rs:
+/Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.126/src/identifier.rs:
+/Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.126/src/tys.rs:
+
+# env-dep:CARGO_PKG_VERSION=0.2.126
+# env-dep:WBG_VERSION

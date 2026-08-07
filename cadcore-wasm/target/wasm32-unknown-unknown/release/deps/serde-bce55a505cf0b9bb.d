@@ -1,0 +1,14 @@
+/Users/lg/cad-project/cad/cadcore-wasm/target/wasm32-unknown-unknown/release/deps/serde-bce55a505cf0b9bb.d: /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /Users/lg/cad-project/cad/cadcore-wasm/target/wasm32-unknown-unknown/release/build/serde-0af20352b0274a31/out/private.rs
+
+/Users/lg/cad-project/cad/cadcore-wasm/target/wasm32-unknown-unknown/release/deps/libserde-bce55a505cf0b9bb.rlib: /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /Users/lg/cad-project/cad/cadcore-wasm/target/wasm32-unknown-unknown/release/build/serde-0af20352b0274a31/out/private.rs
+
+/Users/lg/cad-project/cad/cadcore-wasm/target/wasm32-unknown-unknown/release/deps/libserde-bce55a505cf0b9bb.rmeta: /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /Users/lg/cad-project/cad/cadcore-wasm/target/wasm32-unknown-unknown/release/build/serde-0af20352b0274a31/out/private.rs
+
+/Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs:
+/Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs:
+/Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs:
+/Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs:
+/Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs:
+/Users/lg/cad-project/cad/cadcore-wasm/target/wasm32-unknown-unknown/release/build/serde-0af20352b0274a31/out/private.rs:
+
+# env-dep:OUT_DIR=/Users/lg/cad-project/cad/cadcore-wasm/target/wasm32-unknown-unknown/release/build/serde-0af20352b0274a31/out

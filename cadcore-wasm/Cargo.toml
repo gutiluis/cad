@@ -1,0 +1,21 @@
+[package]
+name = "cadcore-wasm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+console_error_panic_hook = "0.1"
+serde-wasm-bindgen = "0.6"
+serde = { version = "1", features = ["derive"] }
+
+cadcore = { path = "../cadcore/crates/cadcore" }
+cadcore-math = { path = "../cadcore/crates/cadcore-math" }
+cadcore-geom = { path = "../cadcore/crates/cadcore-geom" }
+cadcore-topo = { path = "../cadcore/crates/cadcore-topo" }
+cadcore-ops = { path = "../cadcore/crates/cadcore-ops" }
+cadcore-union = { path = "../cadcore/crates/cadcore-union" }
+

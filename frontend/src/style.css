@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+#ui-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 8px;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+#ui-container label {
+  display: block;
+  margin-top: 10px;
+}
+
+#canvas-container {
+  width: 100vw;
+  height: 100vh;
+}

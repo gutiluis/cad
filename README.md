@@ -29,6 +29,7 @@ git clone https://github.com/gutiluis/cad.git
 - Rust
 - Cadcore
 - JavaScript
+- WASM
 
 ---
 

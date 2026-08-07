@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser-Native CAD</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="ui-container">
+      <h3>CAD Controls</h3>
+      <label for="radiusSlider">Radius: <span id="radiusVal">10</span></label>
+      <input type="range" id="radiusSlider" min="1" max="50" value="10" />
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

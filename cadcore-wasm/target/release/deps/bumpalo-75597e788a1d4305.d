@@ -1,0 +1,9 @@
+/Users/lg/cad-project/cad/cadcore-wasm/target/release/deps/bumpalo-75597e788a1d4305.d: /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.20.3/src/lib.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.20.3/src/alloc.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.20.3/src/../README.md
+
+/Users/lg/cad-project/cad/cadcore-wasm/target/release/deps/libbumpalo-75597e788a1d4305.rlib: /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.20.3/src/lib.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.20.3/src/alloc.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.20.3/src/../README.md
+
+/Users/lg/cad-project/cad/cadcore-wasm/target/release/deps/libbumpalo-75597e788a1d4305.rmeta: /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.20.3/src/lib.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.20.3/src/alloc.rs /Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.20.3/src/../README.md
+
+/Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.20.3/src/lib.rs:
+/Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.20.3/src/alloc.rs:
+/Users/lg/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.20.3/src/../README.md:
