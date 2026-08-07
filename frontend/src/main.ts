@@ -5,131 +5,81 @@ await init();
 
 const kernel = new WasmKernel();
 
-// sine input function
-const sineInput =
-    document.getElementById("sineAngle") as HTMLInputElement;
-const sineButton =
-    document.getElementById("calculateSine") as HTMLButtonElement;
-const sineResult =
-    document.getElementById("sineResult")!;
-sineButton.addEventListener("click", () => {
-    const degrees = Number(
-        sineInput.value
-    );
-    const result = kernel.sine(
-        degrees
-    );
-    sineResult.textContent =
-        result.toString();
-    console.log(
-        `sin(${degrees}) = ${result}`
-    );
-});
+// refactor
+function trigonometricCalculator(
+    inputId: string,
+    buttonId: string,
+    resultId: string,
+    calculation: (value: number) => number,
+    name: string
+) {
+    const input =
+        document.getElementById(inputId) as HTMLInputElement;
+    const button =
+        document.getElementById(buttonId) as HTMLButtonElement;
+    const result =
+        document.getElementById(resultId)!;
+    button.addEventListener("click", () => {
+        const value = Number(input.value);
 
-const cosineInput =
-    document.getElementById("cosineAngle") as HTMLInputElement;
-const cosineButton =
-    document.getElementById("calculateCosine") as HTMLButtonElement;
-const cosineResult =
-    document.getElementById("cosineResult")!;
-cosineButton.addEventListener("click", () => {
-    const degrees = Number(
-        cosineInput.value
-    );
-    const result = kernel.cosine(
-        degrees
-    );
-    cosineResult.textContent =
-        result.toString();
-    console.log(
-        `cosine(${degrees}) = ${result}`
-    );
-});
+        const calculationResult = calculation(value);
 
+        result.textContent = calculationResult.toString();
 
-const tangentInput =
-    document.getElementById("tangentAngle") as HTMLInputElement;
+        console.log(
+            `${name}(${value}) = ${calculationResult}`
+        );
+    });
+}
 
-const tangentButton =
-    document.getElementById("calculateTangent") as HTMLButtonElement;
+trigonometricCalculator(
+    "sineAngle",
+    "calculateSine",
+    "sineResult",
+    // kernel from rust
+    (value) => kernel.sine(value),
+    "sine"
+);
 
-const tangentResult =
-    document.getElementById("tangentResult")!;
+trigonometricCalculator(
+    "cosineAngle",
+    "calculateCosine",
+    "cosineResult",
+    (value) => kernel.cosine(value),
+    "cosine"
+);
 
-tangentButton.addEventListener("click", () => {
-    const degrees = Number(tangentInput.value);
+trigonometricCalculator(
+    "tangentAngle",
+    "calculateTangent",
+    "tangentResult",
+    (value) => kernel.tangent(value),
+    "tangent"
+);
 
-    const result = kernel.tangent(degrees);
+trigonometricCalculator(
+    "arcsineValue",
+    "calculateArcsine",
+    "arcsineResult",
+    (value) => kernel.arcsine(value),
+    "arcsine"
+);
 
-    tangentResult.textContent = result.toString();
+trigonometricCalculator(
+    "arccosineValue",
+    "calculateArccosine",
+    "arccosineResult",
+    (value) => kernel.arccosine(value),
+    "arccosine"
+);
 
-    console.log(`tangent(${degrees}) = ${result}`);
-});
-
-
-// ARCSINE
-const arcsineInput =
-    document.getElementById("arcsineValue") as HTMLInputElement;
-
-const arcsineButton =
-    document.getElementById("calculateArcsine") as HTMLButtonElement;
-
-const arcsineResult =
-    document.getElementById("arcsineResult")!;
-
-arcsineButton.addEventListener("click", () => {
-    const value = Number(arcsineInput.value);
-
-    const result = kernel.arcsine(value);
-
-    arcsineResult.textContent = result.toString();
-
-    console.log(`arcsine(${value}) = ${result}`);
-});
-
-
-// ARCCOSINE
-const arccosineInput =
-    document.getElementById("arccosineValue") as HTMLInputElement;
-
-const arccosineButton =
-    document.getElementById("calculateArccosine") as HTMLButtonElement;
-
-const arccosineResult =
-    document.getElementById("arccosineResult")!;
-
-arccosineButton.addEventListener("click", () => {
-    const value = Number(arccosineInput.value);
-
-    const result = kernel.arccosine(value);
-
-    arccosineResult.textContent = result.toString();
-
-    console.log(`arccosine(${value}) = ${result}`);
-});
-
-
-// ARCTANGENT
-const arctangentInput =
-    document.getElementById("arctangentValue") as HTMLInputElement;
-
-const arctangentButton =
-    document.getElementById("calculateArctangent") as HTMLButtonElement;
-
-const arctangentResult =
-    document.getElementById("arctangentResult")!;
-
-arctangentButton.addEventListener("click", () => {
-    const value = Number(arctangentInput.value);
-
-    const result = kernel.arctangent(value);
-
-    arctangentResult.textContent = result.toString();
-
-    console.log(`arctangent(${value}) = ${result}`);
-});
-
-
+trigonometricCalculator(
+    "arctangentValue",
+    "calculateArctangent",
+    "arctangentResult",
+    (value) => kernel.arctangent(value),
+    "arctangent"
+);
 
 
 // -----------------------------------------------------
