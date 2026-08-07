@@ -14,6 +14,8 @@ Compile cadcore to web assembly
 
 ```
 git clone https://github.com/gutiluis/cad.git
+cd cad/frontend/
+npm run dev
 ```
 
 ---
