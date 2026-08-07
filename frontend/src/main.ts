@@ -5,13 +5,28 @@ await init();
 
 const kernel = new WasmKernel();
 
-// refactor
+// reusable formatter. 3 places
+function formatResult(value: number): string {
+    if (!Number.isFinite(value)) {
+        return "Undefined";
+    }
+    if (Object.is(value, -0)) {
+        value = 0;
+    }
+    return value.toFixed(3).replace(/\.?0+$/, "");
+}
+
+
+
+// function to help rust server before any operation is done
+// refactor. handle empty input, not a number input
 function trigonometricCalculator(
     inputId: string,
     buttonId: string,
     resultId: string,
     calculation: (value: number) => number,
-    name: string
+    name: string,
+    validate?: (value: number) => string | null
 ) {
     const input =
         document.getElementById(inputId) as HTMLInputElement;
@@ -19,12 +34,33 @@ function trigonometricCalculator(
         document.getElementById(buttonId) as HTMLButtonElement;
     const result =
         document.getElementById(resultId)!;
+
     button.addEventListener("click", () => {
+        // check if its empty
+        if (input.value.trim() === "") {
+            result.textContent = "Enter a value";
+            return;
+        }
         const value = Number(input.value);
+        // check if its a number
+        if (!Number.isFinite(value)) {
+            result.textContent = "Invalid number";
+            return;
+        }
+
+        // check if its within the functions domain
+        if (validate) {
+            const error = validate(value);
+            if (error) {
+                // textcontent sets or returns the text content of the specified node, and all its descendants
+                result.textContent = error;
+                return;
+            }
+        }
 
         const calculationResult = calculation(value);
 
-        result.textContent = calculationResult.toString();
+        result.textContent = formatResult(calculationResult);
 
         console.log(
             `${name}(${value}) = ${calculationResult}`
@@ -62,7 +98,14 @@ trigonometricCalculator(
     "calculateArcsine",
     "arcsineResult",
     (value) => kernel.arcsine(value),
-    "arcsine"
+    "arcsine",
+    (value) => {
+        if (value < -1 || value > 1) {
+            return "Value must be between -1 and 1";
+        }
+        return null
+    }
+
 );
 
 trigonometricCalculator(
@@ -70,7 +113,14 @@ trigonometricCalculator(
     "calculateArccosine",
     "arccosineResult",
     (value) => kernel.arccosine(value),
-    "arccosine"
+    "arccosine",
+    // finite restriction validation
+    (value) => {
+        if (value < -1 || value > 1) {
+            return "Value must be between -1 and 1";
+        }
+        return null;
+    }
 );
 
 trigonometricCalculator(
