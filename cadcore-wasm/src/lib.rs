@@ -7,7 +7,13 @@ use wasm_bindgen::prelude::*;
 // import mod.rs module with functions for api
 mod math;
 use serde::Serialize;
-
+// procedural macros are a subset of macros
+// use procedural macros for compile-time regexes, serialisation, and design by contract
+// 3 types of procedural macro: funciton-like and attribute-like #[derive(MyTrait)], custom derive #[proc_macro_derive];pub fn foo(TokenStream) -> TokenStream;
+// macros operate on a list of tokens provided by the compiler and return a list of tokens that the macro use is replaced by
+// #[proc_macro] macro which returns a process macro attribute
+// #[cfg(proc_macro)] crates
+// #[cfg(proce_macro] compiled only for macro use. this is not macros
 #[derive(Serialize)]
 struct MeshData {
     vertices: Vec<f32>,
@@ -23,12 +29,18 @@ pub struct WasmKernel {}
 impl WasmKernel {
 
     #[wasm_bindgen(constructor)]
+    // new is the name of a funciton-like macro
     pub fn new() -> WasmKernel {
         WasmKernel {}
     }
 
     // trigonometric functions. will become API
     #[wasm_bindgen(js_name = sine)]
+    // a token stream is a sequence of tokens, the function-like macros has 2 tokens
+    // pub fn foo(TokenStream) -> TokenStream;
+    // arguments in the funciton-like, attribute-like, or custom derive, macro are called tokens
+    // the first argument is a token between delimiters in the macro use. [Ident(&self), Comma, Ident(degrees: f64)]
+    // custom derive macro
     pub fn sine(&self, degrees: f64) -> f64 {
         math::sine(degrees)
     }
